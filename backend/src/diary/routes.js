@@ -16,6 +16,6 @@ router.post("/entry", authenticateToken, controller.postDiaryEntry);
 router.put("/update/entry", authenticateToken, controller.updateDiaryEntry);
 
 // delete a diary entry
-router.delete("/delete/:id", controller.deleteDiaryEntry);
+router.delete("/delete/:id", authenticateToken, controller.deleteDiaryEntry);
 
 module.exports = router;
